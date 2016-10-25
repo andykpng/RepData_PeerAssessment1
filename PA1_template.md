@@ -56,7 +56,7 @@ The mean per day is 10765
   max_interval_data <- subset(interval_steps_data, Steps == max(interval_steps_data$Steps))
 ```
 
-The interval that contains the maximum number of steps is 835
+The interval that contains the maximum number of steps is 206.1698113 on time interval 835
 
 ###Here we provide a solution for the NA's. We will use the average of that interval across all data to fill in the NA's
 
