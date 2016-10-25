@@ -28,7 +28,7 @@ knitr::opts_chunk$set(echo = TRUE)
   mean_per_day <- mean(as.numeric(steps_data$Steps))
   median_per_day <- median(as.numeric(steps_data$Steps))
   #plotting the no. of steps per day
-  barplot(steps_data$Steps, names = steps_data$Date, xlab = "Date", ylab = "No. of Steps", main = "Number of steps per day")
+  hist(steps_data$Steps, xlab = "No. of steps per day", ylab = "frequency", main = "Histogram of no. of steps per day")
 ```
 
 
@@ -70,7 +70,7 @@ The number of NA rows is `r nrow(raw_steps_data) - nrow(na.omit(raw_steps_data))
   ##Convert date object
   replaced_data[,1] <- as.Date(as.character(replaced_data[,1]), format = "%Y-%m-%d")
   ## plot the data
-  barplot(replaced_data$Steps, names = replaced_data$Date)
+  hist(replaced_data$Steps, xlab = "No. of steps per day", ylab = "frequency", main = "Histogram of no. of steps per day")
 ```
 
 The mean of the replaced data is `r as.character(mean(as.numeric(replaced_data$Steps)))`
@@ -101,3 +101,5 @@ In conclusion, after we filled in all the NA's. The mean remains the same and th
   plot(weekday_data$Interval, weekday_data$Steps, type = "l", xlab = "Interval", ylab = "No. of steps", main = "Weekday Data")
   plot(weekend_data$Interval, weekend_data$Steps, type = "l", xlab = "Interval", ylab = "No. of steps", main = "Weekend Data")
 ```
+
+Thanks for reading!!

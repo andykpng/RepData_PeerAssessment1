@@ -27,7 +27,7 @@ First setup the R envirnoment
   mean_per_day <- mean(as.numeric(steps_data$Steps))
   median_per_day <- median(as.numeric(steps_data$Steps))
   #plotting the no. of steps per day
-  barplot(steps_data$Steps, names = steps_data$Date, xlab = "Date", ylab = "No. of Steps", main = "Number of steps per day")
+  hist(steps_data$Steps, xlab = "No. of steps per day", ylab = "frequency", main = "Histogram of no. of steps per day")
 ```
 
 ![plot of chunk no. of steps](figure/no. of steps-1.png)
@@ -78,7 +78,7 @@ The number of NA rows is 2304
   ##Convert date object
   replaced_data[,1] <- as.Date(as.character(replaced_data[,1]), format = "%Y-%m-%d")
   ## plot the data
-  barplot(replaced_data$Steps, names = replaced_data$Date)
+  hist(replaced_data$Steps, xlab = "No. of steps per day", ylab = "frequency", main = "Histogram of no. of steps per day")
 ```
 
 ![plot of chunk replace missing value](figure/replace missing value-1.png)
@@ -114,3 +114,5 @@ In conclusion, after we filled in all the NA's. The mean remains the same and th
 ```
 
 ![plot of chunk weekday weekend analysis](figure/weekday weekend analysis-1.png)
+
+Thanks for reading!!
