@@ -1,5 +1,5 @@
 #Reproducible Research Project 1
-###By Andy Ng
+##By Andy Ng
 
 This rmarkdown file is used to answer the question in project 1
 First setup the R envirnoment
